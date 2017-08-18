@@ -12,7 +12,7 @@ if(isset($_GET['term'])){
 
 	$term = $_GET['term'];
 
-	$projectId = "wise-hub-175615";
+	$projectId = "smartcompletedemo-v2";
 	$bigQuery = new BigQueryClient([
             'projectId' => $projectId,
         ]);
