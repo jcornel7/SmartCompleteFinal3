@@ -12,12 +12,12 @@ if(isset($_GET['term'])){
 
 	$term = $_GET['term'];
 
-	$projectId = "wise-hub-175615";
+	$projectId = "smartcompletedemo-v2";
 	$bigQuery = new BigQueryClient([
             'projectId' => $projectId,
         ]);
 
-    $query = "SELECT * FROM [wise-hub-175615:gcp.products] where product like '%{$term}%'";
+    $query = "SELECT * FROM [smartcompletedemo-v2:products.name] where product like '%{$term}%'";
     $options = ['useLegacySql' => true];
     $queryResults = $bigQuery->runQuery($query, $options);
 
