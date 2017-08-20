@@ -5,7 +5,7 @@ use Google\Cloud\BigQuery\QueryResults;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-date_default_timezone_set('America/Los_Angeles');
+date_default_timezone_set('America/New_York');
 
 
 if(isset($_GET['term'])){
@@ -28,7 +28,7 @@ if(isset($_GET['term'])){
     foreach ($rows as $row) {
         //printf('--- Row %s ---' . PHP_EOL, ++$i);
         foreach ($row as $column => $value) {
-            if ($column == 'product') {
+            if ($column == 'name') {
            //printf('%s: %s' . PHP_EOL, $column, $value);
             //printf('%s: ' . PHP_EOL, $value);
             $array[] = $value;
